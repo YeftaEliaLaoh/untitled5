@@ -24,12 +24,14 @@ if (empty($arr)){
 	//for ($y = 1; $y <= 3; $y++) {
 	$y = 1;
 	while($valid){
-	unset($c);
+		unset($c);
 		$c = array();
 		print("Giliran lempar dadu ke : $y");
 		print("\n");
 		
 		for ($x = 1; $x <= $arr->pemain; $x++) {
+		unset(${"sisa_$x"});
+		${"sisa_$x"} = array();
 			if(count(${"pemain_$x"}) == 0 && $c[x] == 0)
 			{
 			$dadu = $arr->dadu;
