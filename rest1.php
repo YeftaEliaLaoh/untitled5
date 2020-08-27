@@ -15,7 +15,6 @@ if (empty($arr)){
 	 ${"sisa_$x"} = array();
 	}
 	
-	$c = array();
 	$valid = true;
 	$dadu =0;
 	print("Pemain = ".$arr->pemain.", Dadu ".$arr->dadu);
@@ -25,6 +24,8 @@ if (empty($arr)){
 	//for ($y = 1; $y <= 3; $y++) {
 	$y = 1;
 	while($valid){
+	unset($c);
+		$c = array();
 		print("Giliran lempar dadu ke : $y");
 		print("\n");
 		
@@ -98,24 +99,25 @@ if (empty($arr)){
 		
 		reset(${"sisa_$x"});
 		
-		print_r($c);
-		print("\n");
+		//print_r($c);
+		//print("\n");
 		
 		}
 		
-		print(array_count_values($c)[1]);
-		print("\n");
+		//print(array_count_values($c)[1]);
+		//print("\n");
 		
 		if(array_count_values($c)[1]<=1)
 		{
-		$valid= true;
+		$valid= false;
 		}
 		else
 		{
-		$valid= false;	
+		$valid= true;	
 		}
 		$y++;
 	}	
 	print("============================================"); 
+	print("\n");
 }
 ?>
